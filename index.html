@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flip World Clock</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gitk74 — Apps</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 32px; line-height: 1.6; }
+    header { margin-bottom: 24px; }
+    h1 { margin: 0 0 8px; }
+    .apps { display: grid; gap: 12px; padding: 0; list-style: none; }
+    .app { border: 1px solid #ddd; border-radius: 8px; padding: 12px 14px; }
+    .app a { font-weight: 600; text-decoration: none; }
+    .meta { margin-top: 28px; font-size: 0.95rem; color: #444; }
+  </style>
 </head>
 <body>
-  <h1>Flip World Clock</h1>
-  <p>A simple desktop app that shows the time around the world.</p>
-  <p>Support contact: flipworldclock.support@gmail.com</p>
+  <header>
+    <h1>Gitk74 — Apps</h1>
+    <p>Official landing page for my Windows apps.</p>
+  </header>
+
+  <section>
+    <h2>Available</h2>
+    <ul class="apps">
+      <li class="app">
+        <a href="/flip-world-clock/">Flip World Clock</a><br />
+        <small>A desktop app that shows world times in a clean flip-clock style.</small>
+      </li>
+      <!-- Add more apps as they launch:
+      <li class="app">
+        <a href="/my-next-app/">My Next App</a><br />
+        <small>One-line description goes here.</small>
+      </li>
+      -->
+    </ul>
+  </section>
+
+  <section class="meta">
+    <p>Support: <a href="mailto:flipworldclock.support@gmail.com">flipworldclock.support@gmail.com</a></p>
+    <p>Privacy: <a href="/privacy.html">/privacy.html</a> (add this file if needed)</p>
+    <p>GitHub: <a href="https://github.com/Gitk74">https://github.com/Gitk74</a></p>
+  </section>
 </body>
 </html>
