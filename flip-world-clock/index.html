@@ -69,7 +69,7 @@
     footer a{color:var(--muted);margin-left:14px;}
     footer a:hover{color:var(--accent1)}
     @media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center}.mock{margin-top:40px}.flip{justify-content:center}}
-      .hero-shot { display:block; width:100%; height:auto; border-radius:14px; border:1px solid rgba(255,255,255,.08); box-shadow:0 8px 22px rgba(0,0,0,.35); margin-top:24px; }
+      .hero-shot { display:block; width:100%; height:auto; border-radius:14px; border:1px solid rgba(255,255,255,.08); box-shadow:0 8px 22px rgba(0,0,0,.35); margin-top:24px; grid-column:1 / -1; }
   </style>
 </head>
 <body>
@@ -90,7 +90,6 @@
       <div>
         <h1>Flip World Clock</h1>
         <p class="sub">A desktop world-time app that’s beautiful, precise, and alive. Manage multiple cities across the globe with animated flip clocks, a live sunlight map, and integrated alarms — all in one elegant workspace.</p>
-        <img src="assets/hero-shot-2400x1320.png" alt="Flip World Clock main screenshot" class="hero-shot">
         <div class="cta">
           <a class="btn primary" href="#">Microsoft Store</a>
           <a class="btn" href="mailto:gitk74.app@gmail.com">Contact Support</a>
@@ -108,6 +107,7 @@
           </div>
         </div>
       </div>
+      <img src="assets/hero-shot-2400x1320.png" alt="Flip World Clock main screenshot" class="hero-shot">
     </section>
 
     <section id="features">
