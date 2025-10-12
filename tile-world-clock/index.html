@@ -84,6 +84,14 @@
   @media(max-width:900px){
     .hero{grid-template-columns:1fr}
   }
+  @media (min-width: 900px){
+  .hero{
+    grid-template-columns: minmax(720px, 1.35fr) .65fr;
+  }
+  .hero-title h1{
+    white-space: nowrap;
+  }
+}
 </style>
 </head>
 <body>
