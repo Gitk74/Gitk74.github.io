@@ -6,17 +6,17 @@
   <title>Tile World Clock</title>
   <meta name="description" content="Tile World Clock is a refined world-time and calendar app for Windows — minimal, ambient, and powerful." />
   <meta property="og:title" content="Tile World Clock" />
-  <meta property="og:description" content="Track global time zones in style — sleek design, real‑time sunlight maps, and precision alarms." />
+  <meta property="og:description" content="Track global time zones in style — sleek design, real-time sunlight maps, and precision alarms." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://gitk74.github.io/Tile-world-clock/" />
   <meta property="og:image" content="assets/og-image.png" />
   <meta name="theme-color" content="#0a0f17" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-  /* ===== NEO‑SWISS MINIMAL THEME (monochrome + single accent) ===== */
+  /* ===== NEO-SWISS MINIMAL THEME (monochrome + single accent) ===== */
   :root{
-    --bg:#0b0e12;         /* near‑black */
-    --fg:#f5f7fb;         /* off‑white */
+    --bg:#0b0e12;         /* near-black */
+    --fg:#f5f7fb;         /* off-white */
     --muted:#98a2b3;      /* neutral grey */
     --line:#223;
     --accent:#3bd0ff;     /* single accent */
@@ -29,7 +29,8 @@
   header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(11,14,18,.92);border-bottom:1px solid rgba(255,255,255,.06)}
   nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
   .brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.2px;color:var(--fg)}
-  .logo{width:22px;height:22px;border-radius:4px;background:linear-gradient(90deg,#fff 0,#fff 0);border:2px solid var(--fg)}
+  /* replaced .logo with actual image */
+  .brand-logo{width:22px;height:22px;border-radius:4px;border:2px solid var(--fg);display:block}
   .links a{color:var(--muted);text-decoration:none;margin-left:22px;font-weight:600;position:relative}
   .links a::after{content:"";position:absolute;left:0;bottom:-8px;height:1px;width:0;background:var(--fg);transition:width .2s ease}
   .links a:hover{color:var(--fg)}
@@ -42,6 +43,8 @@
   /* HERO — left aligned, strong type, no glow */
   .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
   .hero h1{font-size:clamp(44px,6vw,76px);line-height:1.02;margin:0;font-weight:800;letter-spacing:-.5px}
+  .hero-title{display:flex;align-items:center;gap:14px}
+  .hero-logo{width:clamp(44px,6vw,72px);height:auto;border-radius:10px;display:block}
   .sub{margin:18px 0 24px;color:var(--muted);font-size:18px;max-width:680px}
   .hero-shot{grid-column:1 / -1;display:block;width:100%;max-width:1200px;height:auto;border-radius:10px;border:1px solid rgba(255,255,255,.08);margin-top:18px}
   .cta{display:flex;gap:12px;margin-top:10px}
@@ -86,7 +89,10 @@
 <body>
   <header>
     <nav>
-      <a class="brand" href="#top"><span class="logo"></span>Tile World Clock</a>
+      <a class="brand" href="#top">
+        <img src="assets/app-icon.png" alt="Tile World Clock icon" class="brand-logo" />
+        Tile World Clock
+      </a>
       <div class="links">
         <a href="#features">Features</a>
         <a href="#gallery">Gallery</a>
@@ -98,22 +104,25 @@
 
   <main>
     <section class="hero" id="top">
-  <div>
-    <h1>Tile World Clock</h1>
-    <p class="sub">Track global time zones in a clean, distraction‑free layout. Minimal UI, strong type, and a single accent — with animated Tile clocks, a precise day‑night map, and timezone‑aware alarms.</p>
-    <div class="cta">
-      <a class="btn primary" href="#">Microsoft Store</a>
-      <a class="btn" href="#features">Learn More</a>
-    </div>
-  </div>
-  <div class="mock"><!-- reserved: keep placeholder compact to emphasize the hero-shot --></div>
-  <img src="assets/hero-shot-2400x1320.png" alt="Tile World Clock main screenshot" class="hero-shot">
-</section>
+      <div>
+        <div class="hero-title">
+          <img src="assets/app-icon.png" alt="Tile World Clock icon" class="hero-logo" />
+          <h1>Tile World Clock</h1>
+        </div>
+        <p class="sub">Track global time zones in a clean, distraction-free layout. Minimal UI, strong type, and a single accent — with animated Tile clocks, a precise day-night map, and timezone-aware alarms.</p>
+        <div class="cta">
+          <a class="btn primary" href="#">Microsoft Store</a>
+          <a class="btn" href="#features">Learn More</a>
+        </div>
+      </div>
+      <div class="mock"><!-- reserved: keep placeholder compact to emphasize the hero-shot --></div>
+      <img src="assets/hero-shot-2400x1320.png" alt="Tile World Clock main screenshot" class="hero-shot">
+    </section>
 
     <section id="features">
-  <h2>Core Features</h2>
-  <div class="rule"></div>
-  <div class="features">
+      <h2>Core Features</h2>
+      <div class="rule"></div>
+      <div class="features">
         <div class="card"><h3>Multi-window Layout</h3><p>Arrange clocks, maps, and calendars across monitors — your workspace, your rhythm.</p></div>
         <div class="card"><h3>Dynamic Day–Night Map</h3><p>Watch sunlight move across the globe with real astronomical precision.</p></div>
         <div class="card"><h3>Tile-clock Display</h3><p>Retro mechanics meet modern polish — readable, fluid, and satisfying.</p></div>
@@ -123,9 +132,9 @@
     </section>
 
     <section id="gallery">
-  <h2>Gallery</h2>
-  <div class="rule"></div>
-  <div class="gallery">
+      <h2>Gallery</h2>
+      <div class="rule"></div>
+      <div class="gallery">
         <figure class="shot"><img src="assets/screen-main.png" alt="Main dashboard"><figcaption>Main dashboard — Five cities in sync</figcaption></figure>
         <figure class="shot"><img src="assets/screen-map.png" alt="World map"><figcaption>Sunlight map — live terminator line</figcaption></figure>
         <figure class="shot"><img src="assets/screen-calendar.png" alt="Calendar view"><figcaption>Calendar — holidays by region</figcaption></figure>
@@ -133,9 +142,9 @@
     </section>
 
     <section id="pricing">
-  <h2>Pricing</h2>
-  <div class="rule"></div>
-  <div class="pricing">
+      <h2>Pricing</h2>
+      <div class="rule"></div>
+      <div class="pricing">
         <div class="plan"><h3>Free Trial</h3><div class="amt">7 Days</div><p>Full access to all features.</p></div>
         <div class="plan"><h3>One-time Purchase</h3><div class="amt">—</div><p>No subscriptions. All future updates included.</p></div>
       </div>
